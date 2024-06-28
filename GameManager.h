@@ -1,9 +1,7 @@
 #pragma once
 #include <memory>
 #include "IScene.h"
-#include "TitleScene.h"
-#include "StageScene.h"
-#include "ClearScene.h"
+#include "Scene.h"
 #include "Novice.h"
 #include "Input.h"
 
@@ -11,10 +9,7 @@ class GameManager
 {
 private:
 	// for maintaining the scene
-	std::unique_ptr<IScene>sceneArr_[3];
-
-	int currentSceneNo_;
-	int prevSceneNo_;
+	std::unique_ptr<IScene>scene_;
 
 public:
 	GameManager();
