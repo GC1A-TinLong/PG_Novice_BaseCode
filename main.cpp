@@ -9,7 +9,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
 
-	std::unique_ptr<GameManager>gameManager = std::make_unique<GameManager>();
+	std::unique_ptr<GameManager>gameManager = std::make_unique<GameManager>();	//	<- this is better than below (new <type>())
+	//std::unique_ptr<GameManager>gameManager(new GameManager());
 
 	gameManager->Run();
 
